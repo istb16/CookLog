@@ -43,8 +43,8 @@ var PageModule = function() {
 					// 結果表示
 					alert('提供相手を保存しました。');
 
-					// 履歴に飛ぶ
-					$.mobile.changePage('memberList.php', 'slide', true);
+					// 終了
+					$('#btnBack').click();
 				}
 
 				return false;
@@ -56,10 +56,11 @@ var PageModule = function() {
 			$('#btnDelete').bind('click', function() {
 				if (confirm('提供相手を削除してもよろしいですか')) {
 					if (MemberDelete()) {
-						// 履歴に飛ぶ
-						$.mobile.changePage('memberList.php', 'slide', true);
+						// 終了
+						$('#btnBack').click();
 					}
 				}
+				return false;
 			});
 		});
 	};

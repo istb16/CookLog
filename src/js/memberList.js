@@ -20,8 +20,8 @@ var PageModule = function() {
 			if (ulList) {
 				for (var key in commonModule.Members) {
 					var member = commonModule.Members[key];
-					ulList.append($.format('<li><a href="memberEdit.php?id=%s"><h1>%s</h1></a></li>',
-//					ulList.append($.format('<li><a href="memberEdit.php" onclick="sessionStorage.QueryParams = \'id=%s\';"><p class="ui-li-aside">%s</p><h1>%s</h1><p>%s</p></a></li>',
+					ulList.append($.format('<li><a href="memberEdit?id=%s"><h1>%s</h1></a></li>',
+//					ulList.append($.format('<li><a href="memberEdit" onclick="sessionStorage.QueryParams = \'id=%s\';"><p class="ui-li-aside">%s</p><h1>%s</h1><p>%s</p></a></li>',
 						encodeURI(key),
 						commonModule.Sanitize(member)));
 				}

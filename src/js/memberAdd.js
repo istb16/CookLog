@@ -18,7 +18,7 @@ var PageModule = function() {
 					alert('提供相手を追加しました。');
 
 					// 終了
-					$('#btnCancel').click();
+					$('#btnBack').click();
 				}
 
 				return false;

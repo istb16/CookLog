@@ -78,8 +78,8 @@ var PageModule = function() {
 					// 結果表示
 					alert('料理を追加しました。');
 
-					// 履歴に飛ぶ
-					$.mobile.changePage('cookLog', 'slide', true);
+					// 終了
+					location.href = 'cookLog';
 				}
 
 				return false;

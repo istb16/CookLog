@@ -106,8 +106,8 @@ var PageModule = function() {
 					// 結果表示
 					alert('料理を保存しました。');
 
-					// 履歴に飛ぶ
-					$.mobile.changePage('cookLog', 'slide', true);
+					// 終了
+					location.href = 'cookLog';
 				}
 
 				return false;
@@ -119,10 +119,12 @@ var PageModule = function() {
 			$('#btnDelete').bind('click', function() {
 				if (confirm('料理を削除してもよろしいですか')) {
 					if (CookDelete()) {
-						// 履歴に飛ぶ
-						$.mobile.changePage('cookLog', 'slide', true);
+						// 終了
+						location.href = 'cookLog';
 					}
 				}
+
+				return false;
 			});
 		});
 	};
