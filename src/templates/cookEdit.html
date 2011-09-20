@@ -1,0 +1,43 @@
+<script src="/js/cookEdit.js"></script>
+
+<div data-role="header">
+	<h1>料理の編集</h1>
+	<a data-icon="back" data-rel="back" data-direction="reverse">Back</a>
+	<a href="index" data-icon="home" data-direction="reverse">Home</a>
+</div>
+
+<div data-role="content">
+	<form action="#" method="post">
+		<input type="hidden" id="hdnId" />
+		<div data-role="fieldcontain">
+			<label for="txtCookName">料理名：</label>
+			<input type="text" name="txtCookName" id="txtCookName" value="" placeholder="料理名を入力してください" required />
+		</div>
+		<div data-role="fieldcontain">
+			<label for="dtCookDate" class="ui-input-text">提供日時：</label>
+			<input type="datetime-local" name="dtCookDate" id="dtCookDate" value="" step="1800" required class="ui-input-text ui-body-null ui-corner-all ui-shadow-inset ui-body-c" />
+		</div>
+		<div data-role="fieldcontain">
+			<fieldset id="fsCookTypes" data-role="controlgroup" data-type="horizontal">
+				<legend>タイプ：</legend>
+			</fieldset>
+		</div>
+		<div data-role="fieldcontain">
+			<label for="ddlCookGenres">ジャンル：</label>
+			<select name="ddlCookGenres" id="ddlCookGenres">
+			</select>
+		</div>
+		<div data-role="fieldcontain">
+			<fieldset data-role="controlgroup" id="cbMembers">
+				<legend>提供相手：</legend>
+				<a href="memberAdd" data-role="button" data-rel="dialog" data-icon="arrow-r" data-iconpos="right">追加</a>
+			</fieldset>
+		</div>
+		<div data-role="fieldcontain">
+			<label for="txaCookMemo">メモ：</label>
+			<textarea cols="40" rows="4" name="txaCookMemo" id="txaCookMemo"></textarea>
+		</div>
+		<input type="submit" id="btnAdd" data-theme="b" data-icon="check" value="保存" />
+		<a id="btnDelete" href="#" data-role="button" data-icon="delete">削除</a>
+	</form>
+</div>
