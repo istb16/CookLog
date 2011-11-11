@@ -1,5 +1,5 @@
 application: cooklogs
-version: 1
+version: 2
 runtime: python
 api_version: 1
 
@@ -10,6 +10,10 @@ handlers:
 - url: /favicon.ico
   static_files: favicon.ico
   upload: favicon.ico
+
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
 
 - url: /.*
   script: cooklogs.py

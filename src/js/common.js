@@ -24,9 +24,9 @@ var CommonModule = function() {
 
 		$(document).bind('mobileinit', function() {
 			$.mobile.ajaxEnabled = false;
-			$.mobile.metaViewportContent = "width=device-width, initial-scale=1";
 			$.mobile.selectmenu.prototype.options.nativeMenu = false;
 			$.mobile.page.prototype.options.degradeInputs.date = true;
+			$.mobile.metaViewportContent = "width=device-width";
 		});
 	};
 
